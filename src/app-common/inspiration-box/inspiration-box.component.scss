@@ -1,0 +1,74 @@
+@import "variables";
+@import "font-face";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.wrapper {
+  padding-bottom: 150px;
+}
+
+.info-title {
+  font-size: 52px;
+  font-weight: 600;
+  color: $white;
+  line-height: 64px;
+}
+
+.info-description {
+  padding-top: 18px;
+  font-size: 18px;
+  line-height: 32px;
+  color: $white;
+}
+
+@media (max-width: 1024px) {
+  .info-title {
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .info-description {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .info-button {
+    margin-top: 30px;
+    padding: 18px 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .info-description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .info-button {
+    margin-top: 20px;
+    padding: 16px 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .info-description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .info-button {
+    margin-top: 15px;
+    padding: 12px 24px;
+  }
+}

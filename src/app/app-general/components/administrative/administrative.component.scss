@@ -1,0 +1,124 @@
+@import "variables";
+@import "font-face";
+
+.container {
+  font-family: "Graphik LCG", sans-serif;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  max-height: 940px;
+  background-image: url("../../../../static/icons/background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-height: 860px;
+  height: 100%;
+}
+
+.info-title {
+  font-size: 52px;
+  font-weight: 600;
+  color: $white;
+  line-height: 64px;
+}
+
+.info-description {
+  padding-top: 18px;
+  font-size: 18px;
+  line-height: 32px;
+  color: $white;
+}
+
+.info-button {
+  margin-top: 40px;
+  padding: 20px 40px;
+  background-color: $white;
+  border-radius: 4px;
+  border: 1px solid $border-1;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  cursor: pointer;
+}
+
+.intro {
+  padding-top: 80px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    background-image: url("../../../../static/icons/background-tablet.svg");
+  }
+  .info-title {
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .info-description {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .info-button {
+    margin-top: 30px;
+    padding: 18px 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    background-image: url("../../../../static/icons/background-mobile.svg");
+  }
+  .info-container {
+    padding: 20px 10px;
+  }
+  .info-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .info-description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .info-button {
+    margin-top: 20px;
+    padding: 16px 32px;
+  }
+  .how-it-works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    background-image: url("../../../../static/icons/background-smallMobile.svg");
+  }
+  .info-container {
+    padding: 15px 5px;
+  }
+  .info-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .info-description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .info-button {
+    margin-top: 15px;
+    padding: 12px 24px;
+  }
+  .how-it-works {
+    padding: 20px 0;
+  }
+}

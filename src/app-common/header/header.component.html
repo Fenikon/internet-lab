@@ -1,0 +1,64 @@
+@if(breakpointsService.desktopMatch$ | async) {
+<ng-container *ngTemplateOutlet="desktop"></ng-container>
+} @else {
+<ng-container *ngTemplateOutlet="tabletOrLower"></ng-container>
+}
+
+<ng-template #desktop>
+  <div class="container">
+    <app-icons iconName="logo" class="logo"></app-icons>
+    <div class="menu-blocks">
+      <div class="block">Как это работает</div>
+      <div class="block">3-й блок</div>
+      <div class="block">Вопросы и ответы</div>
+      <div class="block">Форма</div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #tabletOrLower>
+  <div class="container tabletOrLower">
+    <app-icons iconName="logo" class="logo"></app-icons>
+    <button
+      appearance="flat"
+      size="m"
+      tuiButton
+      tuiDropdownAlign="left"
+      type="button"
+      [tuiAppearanceState]="open ? 'active' : null"
+      [tuiDropdown]="dropdown"
+      [tuiDropdownSided]="true"
+      [(tuiDropdownOpen)]="open"
+    >
+      <mat-icon class="menu-lines">drag_handle</mat-icon>
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #dropdown let-close>
+  <tui-data-list>
+    <tui-opt-group>
+      <div class="header-menu">
+        <app-icons iconName="logo-black" class="logo"></app-icons>
+        <button (click)="onClick()">
+          <tui-icon background="@tui.x" [style.background]="'black'" />
+        </button>
+      </div>
+    </tui-opt-group>
+    @for(group of groups; track group) {
+    <tui-opt-group>
+      @for(item of group; track item) {
+      <button
+        tuiOption
+        type="button"
+        (click)="onClick()"
+        [style.color]="'var(--tui-text-secondary)'"
+      >
+        {{ item }}
+        <tui-icon background="@tui.chevron-right" [style.background]="'grey'" />
+      </button>
+      }
+    </tui-opt-group>
+    }
+  </tui-data-list>
+</ng-template>

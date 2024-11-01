@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="title-header">{{ title }}</div>
+  <div tuiCarouselButtons class="wrapper">
+    @if(itemsCountReviews === 3){
+    <button
+      iconStart="@tui.chevron-left"
+      tuiIconButton
+      type="button"
+      (click)="prev()"
+      [disabled]="index === 0"
+    >
+      Previous
+    </button>
+    }
+    <tui-carousel [itemsCount]="itemsCountReviews" [(index)]="index">
+      @for(reviews of reviews; track reviews){
+      <ng-container class="item-container">
+        <div *tuiItem class="item">
+          <div class="header">
+            <tui-avatar
+              [src]="reviews.image ?? '' | tuiFallbackSrc : '@tui.user' | async"
+            />
+            <div class="title-container">
+              <div class="title">{{ reviews.name }}</div>
+              <p class="city">{{ reviews.city }}</p>
+            </div>
+          </div>
+          <div class="description">{{ reviews.description }}</div>
+        </div>
+      </ng-container>
+      }
+    </tui-carousel>
+    @if(itemsCountReviews === 3){
+    <button
+      iconStart="@tui.chevron-right"
+      tuiIconButton
+      type="button"
+      class="buttons-carousel"
+      (click)="next()"
+      [disabled]="index >= reviews.length - itemsCount"
+    >
+      Next
+    </button>
+    }
+  </div>
+  <tui-pagination
+    size="s"
+    class="tui-space_top-3"
+    [length]="reviews.length"
+    [(index)]="index"
+    (indexChange)="onIndex($event)"
+  />
+</div>
+<div class="block" style="height: 80px"></div>
+<hr class="gray-line" />

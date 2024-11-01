@@ -1,0 +1,75 @@
+@import "variables";
+@import "font-face";
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    height: 80px;
+    padding: 0 17px 0 17px;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+tui-data-list {
+  width: 375px;
+}
+
+@media (max-width: 375px) {
+  tui-data-list {
+    width: calc(100% - 16px);
+  }
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.menu-blocks {
+  display: flex;
+}
+
+.menu-lines {
+  cursor: pointer;
+}
+
+.block {
+  padding-left: 24px;
+  color: $white;
+  font-size: 16px;
+  position: relative;
+  cursor: pointer;
+}
+
+.block::after {
+  content: "";
+  position: absolute;
+  left: 24px;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: $white;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.block:hover::after {
+  opacity: 1;
+}
+
+.menu-lines {
+  color: $white;
+}

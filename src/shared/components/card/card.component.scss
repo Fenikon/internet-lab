@@ -1,0 +1,82 @@
+@import "variables";
+@import "font-face";
+
+.card {
+  font-family: Graphik LCG, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  max-width: 280px;
+  border-radius: 4px;
+  background-color: $white;
+
+  .image {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 16px;
+  }
+
+  .title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 4px;
+    color: $black;
+    text-wrap: wrap;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    text-wrap: wrap;
+    color: $gray-1;
+  }
+  .content {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .card {
+    max-width: 342px;
+    width: 100%;
+    flex-direction: row;
+
+    .image {
+      min-width: 72px;
+      min-height: 72px;
+      padding-right: 16px;
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .card {
+    max-width: 350px;
+    flex-direction: row;
+
+    .image {
+      min-width: 56px;
+      min-height: 56px;
+      padding-right: 16px;
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .card {
+    max-width: 288px;
+    flex-direction: row;
+
+    .image {
+      min-width: 56px;
+      min-height: 56px;
+      padding-right: 6px;
+      margin: 0;
+    }
+  }
+}

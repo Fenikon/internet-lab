@@ -1,0 +1,164 @@
+@import "variables";
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  max-width: 1216px;
+  margin: 0 auto;
+  padding: 80px 0 0 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  padding: 0 20px;
+  max-width: 592px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  padding-right: 22px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 28px;
+  color: $gray-1;
+  text-align: start;
+  padding-top: 18px;
+}
+
+.secondary-description {
+  font-size: 16px;
+  line-height: 28px;
+  color: $gray-1;
+  text-align: start;
+  padding-top: 30px;
+}
+
+.image {
+  width: 592px;
+  height: 448px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .intro {
+    margin-top: 71px;
+    padding: 0;
+  }
+
+  .content {
+    padding-right: 29px;
+    max-width: 352px;
+    max-height: 265px;
+  }
+
+  .image {
+    width: 351px;
+    height: 265px;
+  }
+
+  .title {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    padding-right: 36px;
+    padding-top: 20px;
+  }
+
+  .description {
+    font-size: 14px;
+    padding-top: 15px;
+  }
+  .secondary-description {
+    font-size: 14px;
+    flex: 1;
+    padding-top: 15px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .intro {
+    margin-top: 56px;
+    max-width: 342px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .content {
+    padding: 0;
+    max-width: 352px;
+    max-height: 265px;
+  }
+
+  .image {
+    width: 342px;
+    height: 258px;
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    padding-top: 7px;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 14px;
+    padding: 0;
+    text-align: center;
+  }
+  .secondary-description {
+    font-size: 14px;
+    padding-top: 15px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .intro {
+    margin-top: 56px;
+    padding: 0;
+    max-width: 288px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .content {
+    padding: 27px 0 0 0;
+    max-width: 352px;
+    max-height: 265px;
+  }
+
+  .image {
+    width: 288px;
+    height: 218px;
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 0;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 14px;
+    padding: 27px 0 0 0;
+    text-align: center;
+  }
+  .secondary-description {
+    font-size: 14px;
+    padding-top: 15px;
+    text-align: center;
+  }
+}

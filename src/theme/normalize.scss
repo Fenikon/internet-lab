@@ -1,0 +1,105 @@
+/* Box sizing rules */
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Set core body defaults */
+body {
+  // min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  appearance: none;
+  /* Удаление стилей, применяемых браузером */
+  border: none;
+  /* Удаление границы */
+  outline: none;
+  /* Удаление контура фокуса */
+  background: none;
+  /* Удаление фона */
+  padding: 0;
+  /* Удаление отступов */
+  margin: 0;
+  /* Удаление отступов */
+  font: inherit;
+  /* Наследование шрифта */
+}
+
+/* Remove focus outline on elements that cannot be accessed via keyboard */
+a,
+button {
+  outline: none;
+}
+
+/* Normalize anchor tag */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset button */
+button {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Standardize heading margins */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
