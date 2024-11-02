@@ -28,7 +28,7 @@ tui-data-list {
   width: 375px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 440px) {
   tui-data-list {
     width: calc(100% - 16px);
   }

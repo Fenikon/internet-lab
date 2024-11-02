@@ -10,5 +10,5 @@ import { Component, Input } from '@angular/core';
 export class IconsComponent {
   @Input() public iconName: string | undefined;
 
-  public staticUrl = '/static/icons/';
+  public staticUrl = './static/icons/';
 }

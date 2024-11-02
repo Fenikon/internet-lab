@@ -44,15 +44,6 @@ export class BreakpointsService implements OnDestroy {
       .observe([DESKTOP, TABLET, MOBILE, SMALL_MOBILE])
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe(({ breakpoints }) => {
-        if (breakpoints[DESKTOP]) {
-          console.log('DESKTOP');
-        } else if (breakpoints[TABLET]) {
-          console.log('TABLET');
-        } else if (breakpoints[MOBILE]) {
-          console.log('MOBILE');
-        } else if (breakpoints[SMALL_MOBILE]) {
-          console.log('SMALL MOBILE');
-        }
         this._smallMobileMatch$.next(breakpoints[SMALL_MOBILE]);
         this._mobileMatch$.next(breakpoints[MOBILE]);
         this._tabletMatch$.next(breakpoints[TABLET]);

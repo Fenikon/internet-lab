@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "rik-masters": {
+    "internet-lab": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/rik-masters",
+            "outputPath": "dist/internet-lab",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -79,10 +79,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "rik-masters:build:production"
+              "buildTarget": "internet-lab:build:production"
             },
             "development": {
-              "buildTarget": "rik-masters:build:development"
+              "buildTarget": "internet-lab:build:development"
             }
           },
           "defaultConfiguration": "development"

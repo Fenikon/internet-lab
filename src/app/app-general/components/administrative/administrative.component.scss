@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: start;
   max-height: 940px;
-  background-image: url("../../../../static/icons/background-desktop.svg");
+  background-image: url("../../../../static/icons/background-desktop.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -56,7 +56,7 @@
 
 @media (max-width: 1024px) {
   .container {
-    background-image: url("../../../../static/icons/background-tablet.svg");
+    background-image: url("../../../../static/icons/background-tablet.png");
   }
   .info-title {
     font-size: 36px;
@@ -74,7 +74,7 @@
 
 @media (max-width: 768px) {
   .container {
-    background-image: url("../../../../static/icons/background-mobile.svg");
+    background-image: url("../../../../static/icons/background-mobile.png");
   }
   .info-container {
     padding: 20px 10px;
@@ -101,7 +101,7 @@
 
 @media (max-width: 320px) {
   .container {
-    background-image: url("../../../../static/icons/background-smallMobile.svg");
+    background-image: url("../../../../static/icons/background-smallMobile.png");
   }
   .info-container {
     padding: 15px 5px;
